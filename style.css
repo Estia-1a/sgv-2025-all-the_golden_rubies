@@ -1,0 +1,223 @@
+/* DÉBUT DU FICHIER CSS */
+
+/* RESET GÉNÉRAL : On enlève les marges par défaut pour mieux contrôler le design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut les bordures dans la largeur des éléments */
+    font-family: 'Poppins', sans-serif; /* Utilisation de la police moderne importée */
+}
+
+/* STYLE DU HEADER (Menu) */
+header {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Espace max entre logo, menu et recherche */
+    align-items: center; /* Centre verticalement */
+    padding: 20px 50px; /* Espace intérieur */
+    background-color: white; /* Fond blanc */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Petite ombre portée pour le relief */
+    position: sticky; /* Le menu reste collé en haut quand on scrolle */
+    top: 0;
+    z-index: 1000; /* S'assure que le menu est au-dessus de tout */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50; /* Bleu foncé moderne */
+}
+
+nav ul {
+    display: flex; /* Met les liens en ligne */
+    list-style: none; /* Enlève les puces de la liste */
+}
+
+nav ul li a {
+    text-decoration: none; /* Enlève le soulignement */
+    color: #333;
+    margin: 0 20px; /* Espacement entre les liens */
+    font-weight: 500;
+    transition: color 0.3s; /* Animation douce au survol */
+}
+
+nav ul li a:hover {
+    color: #e74c3c; /* Change de couleur au survol (Rouge Basque moderne) */
+}
+
+/* BARRE DE RECHERCHE GOOGLE */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 30px; /* Arrondit les bords */
+    padding: 5px;
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 0; /* Caché par défaut */
+    padding: 0;
+    transition: 0.4s; /* Animation d'ouverture */
+    visibility: hidden;
+}
+
+/* Classe activée par le Javascript pour montrer l'input */
+.search-box input.active {
+    width: 200px;
+    padding: 0 10px;
+    visibility: visible;
+}
+
+.search-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO SECTION (Grande image principale) */
+.hero {
+    /* Pour cette image, utilise 'remiseclé.jpg' que tu m'as envoyée */
+    /* L'image est assombrie par linear-gradient pour lire le texte blanc */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('remiseclé.jpg');
+    background-size: cover; /* L'image couvre toute la zone */
+    background-position: center;
+    height: 80vh; /* Prend 80% de la hauteur de l'écran */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Très grand texte */
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e74c3c; /* Rouge vif */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Grossit légèrement au survol */
+    background-color: #c0392b;
+}
+
+/* SECTION VALEURS (Simplifiée / Sécurisée) */
+.features {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.features .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Passe à la ligne sur mobile */
+}
+
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Ombre douce moderne */
+    max-width: 400px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 40px;
+    color: #3498db; /* Bleu */
+    margin-bottom: 20px;
+}
+
+/* SECTION PAYS BASQUE */
+.basque-country {
+    display: flex;
+    align-items: center;
+    padding: 80px 10%; /* Marges larges sur les côtés */
+    gap: 50px;
+}
+
+.text-part {
+    flex: 1; /* Prend la moitié de la place */
+}
+
+.image-part {
+    flex: 1; /* Prend l'autre moitié */
+}
+
+.image-part img {
+    width: 100%;
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 20px 20px 0px #e74c3c; /* Effet graphique décalé rouge */
+}
+
+/* SECTION AVIS */
+.testimonials {
+    padding: 80px 20px;
+    background-color: #2c3e50; /* Fond sombre */
+    color: white;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.stars {
+    color: #f1c40f; /* Jaune pour les étoiles */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a252f; /* Très sombre */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.socials {
+    margin: 20px 0;
+}
+
+.socials a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #3498db; /* Bleu au survol */
+}
