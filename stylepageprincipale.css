@@ -540,3 +540,89 @@ a {
         justify-content: center;
     }
 }
+/* --- SECTION FAQ MODERNE --- */
+
+.faq-section {
+    padding: 60px 0;
+    background-color: #f9fbfc; /* Fond très légèrement bleuté/gris pour détacher la section */
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 40px auto 0; /* Centre la FAQ */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espace entre les questions */
+}
+
+/* Le bloc de chaque question */
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre douce */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f5;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 185, 142, 0.15); /* Légère lueur verte au survol */
+    transform: translateY(-2px);
+}
+
+/* La question (titre visible) */
+.faq-item summary {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    list-style: none; /* Cache la flèche par défaut */
+    position: relative;
+    padding-right: 50px; /* Place pour notre icône perso */
+}
+
+/* Cache la flèche par défaut sur certains navigateurs (Chrome/Safari) */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Notre petite icône "+" personnalisée */
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #00B98E; /* Votre vert */
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+/* Quand la question est ouverte */
+.faq-item[open] summary {
+    border-bottom: 1px solid #f0f0f0;
+    color: #00B98E; /* Le titre devient vert */
+}
+
+/* L'icône "+" tourne pour devenir un "x" (ou juste tourner) */
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Le texte de réponse */
+.faq-content {
+    padding: 20px 25px;
+    color: #666;
+    line-height: 1.6;
+    background-color: #fff;
+    font-size: 0.95rem;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Petite animation d'apparition douce */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
