@@ -1,6 +1,6 @@
-/* Variables de couleurs pour faciliter la gestion */
+
 :root {
-    /* Couleurs inspirées de l'image Studapart */
+
     --primary-blue: #2c3e50; 
     --secondary-blue: #34495e; 
     --accent-red: #e74c3c; 
@@ -12,7 +12,7 @@
     --pill-border: #c2c9d1;
 }
 
-/* ------------------ Reset et Général ------------------ */
+
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
@@ -29,7 +29,7 @@ body {
     padding: 15px 0;
 }
 
-/* ------------------ Header et Navigation ------------------ */
+
 .main-header {
     background: var(--primary-blue);
     color: white;
@@ -51,7 +51,7 @@ body {
     align-items: center;
 }
 
-.logo i { /* Style pour l'icône Font Awesome */
+.logo i { 
     margin-right: 8px;
     font-size: 1.2em;
 }
@@ -74,10 +74,10 @@ body {
     font-weight: 500;
     display: flex;
     align-items: center;
-    padding: 5px 0; /* Ajouter un peu de padding */
+    padding: 5px 0; 
 }
 
-/* Breadcrumb */
+
 .breadcrumb-container {
     background-color: #f0f2f5;
     padding: 10px 0;
@@ -90,9 +90,9 @@ body {
     text-decoration: none;
 }
 
-/* ------------------ Barre de Recherche (Hero Section) ------------------ */
+
 .hero-search-bar {
-    background-color: var(--secondary-blue); /* Utiliser un bleu légèrement différent */
+    background-color: var(--secondary-blue); 
     color: white;
     padding: 40px 0;
     text-align: left;
@@ -143,7 +143,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Champ de recherche de lieu avec icône de suppression */
+
 .filter-group.location-filter input {
     padding-left: 40px; 
     font-weight: 600;
@@ -159,7 +159,7 @@ body {
     font-size: 1em;
 }
 
-/* Style des labels flottants */
+
 .filter-group label {
     display: block; 
     position: absolute;
@@ -217,7 +217,7 @@ body {
     flex-shrink: 0;
 }
 
-/* ------------------ Filtres 'Pill' et Résultats ------------------ */
+
 .search-results {
     padding: 30px 0;
 }
@@ -281,7 +281,7 @@ body {
     font-weight: 600;
 }
 
-/* ------------------ Cartes de Propriété (Grid) ------------------ */
+
 .properties-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
@@ -307,16 +307,16 @@ body {
     background-color: #eee; 
     position: relative;
     overflow: hidden;
-    /* Styles pour simuler une image si aucune n'est affichée */
+
     background-size: cover;
     background-position: center;
 }
 
-/* Exemple de background pour un meilleur rendu sans vraies images */
-.studio-img { background-image: url('https://via.placeholder.com/400x200/4e73df/ffffff?text=Studio+Bidart'); }
-.residence-img { background-image: url('https://via.placeholder.com/400x200/1abc9c/ffffff?text=Residence+Ivy'); }
-.residence-img-ext { background-image: url('https://via.placeholder.com/400x200/3498db/ffffff?text=Residence+Campus'); }
-.colocation-img { background-image: url('https://via.placeholder.com/400x200/9b59b6/ffffff?text=Colocation+Biarritz'); }
+
+.studio-img { background-image: url('./photo_logement/logement1.webp'); }
+.residence-img { background-image: url('./photo_logement/logement2.webp'); }
+.residence-img-ext { background-image: url('./photo_logement/logement3.webp'); }
+.colocation-img { background-image: url('./photo_logement/logement4.webp'); }
 
 
 .card-image .tag {
@@ -335,7 +335,7 @@ body {
 }
 
 .card-image .tag.new {
-    background-color: #2ecc71; /* Vert pour Nouveauté */
+    background-color: #2ecc71;
 }
 
 
@@ -358,7 +358,7 @@ body {
 
 .card-content {
     padding: 15px;
-    min-height: 200px; /* S'assurer que les cartes ont une hauteur similaire */
+    min-height: 200px; 
     display: flex;
     flex-direction: column;
 }
@@ -393,12 +393,12 @@ body {
 .card-content .price {
     font-size: 1.4em;
     font-weight: 700;
-    color: var(--accent-red); /* Mettre le prix en rouge comme dans l'exemple */
+    color: var(--accent-red);
     margin-bottom: 15px;
     display: flex;
     align-items: baseline;
     gap: 5px;
-    margin-top: auto; /* Pousser le prix vers le bas */
+    margin-top: auto;
 }
 
 .card-content .price .per-month {
@@ -429,7 +429,7 @@ body {
     color: #28a745; 
 }
 
-/* ------------------ Footer ------------------ */
+
 .main-footer {
     background-color: #333;
     color: white;
@@ -445,7 +445,7 @@ body {
     margin: 0 10px;
 }
 
-/* ------------------ Media Queries (Responsive) ------------------ */
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
