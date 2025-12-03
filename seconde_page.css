@@ -1,0 +1,486 @@
+/* Variables de couleurs pour faciliter la gestion */
+:root {
+    /* Couleurs inspirées de l'image Studapart */
+    --primary-blue: #2c3e50; 
+    --secondary-blue: #34495e; 
+    --accent-red: #e74c3c; 
+    --light-gray-bg: #f5f5f5; 
+    --text-color: #333;
+    --border-color: #ddd;
+    --card-bg: #fff;
+    --pill-bg: #e0e6ec;
+    --pill-border: #c2c9d1;
+}
+
+/* ------------------ Reset et Général ------------------ */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--light-gray-bg);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+/* ------------------ Header et Navigation ------------------ */
+.main-header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+}
+
+.logo i { /* Style pour l'icône Font Awesome */
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 0; /* Ajouter un peu de padding */
+}
+
+/* Breadcrumb */
+.breadcrumb-container {
+    background-color: #f0f2f5;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.breadcrumb-container a {
+    color: #666;
+    text-decoration: none;
+}
+
+/* ------------------ Barre de Recherche (Hero Section) ------------------ */
+.hero-search-bar {
+    background-color: var(--secondary-blue); /* Utiliser un bleu légèrement différent */
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.hero-search-bar h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-search-bar p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.hero-search-bar .read-more {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.search-filters-bar {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    position: relative;
+    flex: 1;
+    min-width: 120px;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.95em;
+    background-color: white;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/* Champ de recherche de lieu avec icône de suppression */
+.filter-group.location-filter input {
+    padding-left: 40px; 
+    font-weight: 600;
+}
+
+.filter-group .remove-filter {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Style des labels flottants */
+.filter-group label {
+    display: block; 
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 0.8em;
+    color: #666;
+    pointer-events: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.filter-group.select-filter select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; 
+    font-weight: 600;
+}
+
+.more-filters button {
+    background-color: #f0f2f5;
+    font-weight: 600;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-filters .badge {
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    margin-left: 5px;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.btn-primary-red {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* ------------------ Filtres 'Pill' et Résultats ------------------ */
+.search-results {
+    padding: 30px 0;
+}
+
+.filter-pills {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background-color: var(--pill-bg); 
+    color: #555;
+    border: 1px solid var(--pill-border);
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.pill i {
+    color: #888;
+}
+
+.pill.active {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.pill.active i {
+    color: white;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.results-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.sort-by select {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 8px 10px;
+    background-color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* ------------------ Cartes de Propriété (Grid) ------------------ */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+}
+
+.property-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.property-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-color: #eee; 
+    position: relative;
+    overflow: hidden;
+    /* Styles pour simuler une image si aucune n'est affichée */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Exemple de background pour un meilleur rendu sans vraies images */
+.studio-img { background-image: url('https://via.placeholder.com/400x200/4e73df/ffffff?text=Studio+Bidart'); }
+.residence-img { background-image: url('https://via.placeholder.com/400x200/1abc9c/ffffff?text=Residence+Ivy'); }
+.residence-img-ext { background-image: url('https://via.placeholder.com/400x200/3498db/ffffff?text=Residence+Campus'); }
+.colocation-img { background-image: url('https://via.placeholder.com/400x200/9b59b6/ffffff?text=Colocation+Biarritz'); }
+
+
+.card-image .tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--accent-red);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-image .tag.new {
+    background-color: #2ecc71; /* Vert pour Nouveauté */
+}
+
+
+.card-image .favorite-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    padding: 15px;
+    min-height: 200px; /* S'assurer que les cartes ont une hauteur similaire */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h4 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.card-content .type-location {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card-content .details {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card-content .description {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-content .price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent-red); /* Mettre le prix en rouge comme dans l'exemple */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: auto; /* Pousser le prix vers le bas */
+}
+
+.card-content .price .per-month {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #888;
+}
+
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.amenities-list li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.amenities-list li i {
+    color: #28a745; 
+}
+
+/* ------------------ Footer ------------------ */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* ------------------ Media Queries (Responsive) ------------------ */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 0 10px;
+    }
+    .hero-search-bar {
+        padding: 30px 0;
+    }
+    .search-filters-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .filter-group {
+        width: 100%;
+        min-width: unset;
+    }
+    .btn-primary-red {
+        width: 100%;
+        justify-content: center;
+    }
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

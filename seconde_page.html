@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstiaLogement - Votre résidence étudiante près de l'ESTIA Bidart</title>
+    <link rel="stylesheet" href="seconde_page.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#accueil">
+                    <i class="fas fa-home"></i> 
+                    <span>EstiaLogement</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Louer mon logement</a></li>
+                    <li><a href="#">Le blog <i class="fas fa-chevron-down fa-xs"></i></a></li>
+                    <li><a href="#">Je suis propriétaire</a></li>
+                    <li><a href="#"><i class="fas fa-bars"></i> Menu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <a href="#">Accueil</a> > <a href="#">Logement étudiant</a> > <a href="#">Logement ESTIA Bidart</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-search-bar">
+            <div class="container">
+                <h2>Logement étudiant à Bidart : résidence étudiante, studio</h2>
+                <p>Découvrez nos annonces de logements proches de l'ESTIA Bidart : résidence étudiante, location entre particuliers. Prix bas garantis ! <a href="#" class="read-more">Lire la suite</a></p>
+
+                <div class="search-filters-bar">
+                    <div class="filter-group location-filter">
+                        <span class="remove-filter"><i class="fas fa-times-circle"></i></span>
+                        <input type="text" value="Bidart, Code postal..." placeholder="Ville, Code postal...">
+                        <label for="location">Bidart</label>
+                    </div>
+                    <div class="filter-group date-filter">
+                        <input type="text" value="01/12/2025">
+                        <label for="date">01/12/2025</label>
+                    </div>
+                    <div class="filter-group select-filter">
+                        <select>
+                            <option>Type de logement</option>
+                        </select>
+                    </div>
+                    <div class="filter-group select-filter">
+                        <select>
+                            <option>Budget</option>
+                        </select>
+                    </div>
+                    <div class="filter-group select-filter">
+                        <select>
+                            <option>Pièces</option>
+                        </select>
+                    </div>
+                    <div class="filter-group select-filter more-filters">
+                        <button>Autres <span class="badge">+2</span></button>
+                    </div>
+                    <button class="btn-primary-red"><i class="fas fa-bell"></i> Enregistrer mon alerte</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-results">
+            <div class="container">
+                <div class="filter-pills">
+                    <button class="pill active"><i class="fas fa-times-circle"></i> Colocations à Bidart uniquement</button>
+                    <button class="pill"><i class="fas fa-times-circle"></i> Adaptés aux jeunes actifs à Bidart</button>
+                </div>
+
+                <div class="results-header">
+                    <h3>200+ logements disponibles</h3>
+                    <div class="sort-by">
+                        Trier par:
+                        <select>
+                            <option>Recommandé</option>
+                            <option>Prix croissant</option>
+                            <option>Prix décroissant</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="properties-grid">
+
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="./photo_logement/logement1.webp" alt="Studio moderne près de l'ESTIA Bidart">
+                            <div class="favorite-icon"><i class="far fa-heart"></i></div>
+                        </div>
+
+                        <div class="card-content">
+                            <h4>Studio calme et lumineux au cœur du Bidart</h4>
+                            <p class="type-location">Studio (Réf. ESTIA-S001)</p>
+                            <p class="details">Bidart 64210 | 30m² | Meublé</p>
+                            <p class="description">Studio meublé - Vue dégagée sur la côte basque... Idéal pour étudiant ESTIA.</p>
+                            <div class="price">
+                                <span>1800€</span><span class="per-month">/ mois</span>
+                            </div>
+                            <ul class="amenities-list">
+                                <li><i class="fas fa-check-circle"></i> Disponible immédiatement</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="./photo_logement/logement2.webp" alt="Intérieur de la résidence étudiante Canvas Ivy">
+                            <span class="tag promotion"><i class="fas fa-star"></i> Promotion en cours</span>
+                            <div class="favorite-icon"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Logement en résidence "Canvas Ivy" sur Bidart</h4>
+                            <p class="type-location">Logement en résidence (Réf. ESTIA-R005)</p>
+                            <p class="details">Bidart 64210 | 18m² | Meublé - Parking</p>
+                            <p class="description">Profitez de 10 % de réduction par mois grâce à notre offre d'ouverture !...</p>
+                            <div class="price">
+                                <span>à partir de 1099€</span><span class="per-month">/ mois</span>
+                            </div>
+                            <ul class="amenities-list">
+                                <li><i class="fas fa-check-circle"></i> Disponible immédiatement</li>
+                                <li><i class="fas fa-wifi"></i> Salle de sport</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="./photo_logement/logement3.webp" alt="Façade de la résidence Twenty Campus Bidart">
+                            <span class="tag new"><i class="fas fa-star"></i> Nouveauté</span>
+                            <div class="favorite-icon"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Résidence Twenty Campus Bidart</h4>
+                            <p class="type-location">Logement en résidence (Réf. ESTIA-R012)</p>
+                            <p class="details">Bidart 64210 | 20m² | Meublé - Salle de sport</p>
+                            <p class="description">Découvrez notre nouvelle résidence étudiante. À 5 min de l'ESTIA.</p>
+                            <div class="price">
+                                <span>à partir de 850€</span><span class="per-month">/ mois</span>
+                            </div>
+                            <ul class="amenities-list">
+                                <li><i class="fas fa-check-circle"></i> Disponible immédiatement</li>
+                                <li><i class="fas fa-coffee"></i> Cafétéria</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="card-image">
+                            <img src="./photo_logement/logement4.webp" alt="Salon de colocation de luxe">
+                            <span class="tag promotion"><i class="fas fa-star"></i> Dernière chance</span>
+                            <div class="favorite-icon"><i class="far fa-heart"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Colocation de luxe 4 pièces à 10 min de l'ESTIA</h4>
+                            <p class="type-location">Colocation (Réf. ESTIA-C002)</p>
+                            <p class="details">Biarritz 64200 | 90m² | 3 Chambres restantes</p>
+                            <p class="description">Appartement meublé, entièrement équipé, coliving moderne et chaleureux...</p>
+                            <div class="price">
+                                <span>à partir de 750€</span><span class="per-month">/ mois/pers.</span>
+                            </div>
+                            <ul class="amenities-list">
+                                <li><i class="fas fa-check-circle"></i> Disponible 01/09</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 EstiaLogement. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#">Mentions Légales</a>
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">Plan du site</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
