@@ -337,6 +337,9 @@ body {
 .card-image .tag.new {
     background-color: #2ecc71;
 }
+.card-image .tag.indisponible {
+    background-color: black;
+}
 
 
 .card-image .favorite-icon {
