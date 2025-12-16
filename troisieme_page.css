@@ -2,7 +2,7 @@ body {
 margin: 0;
 padding: 0;
 font-family: Arial, sans-serif;
-background: #d9ecf8;
+background: #fbfbfb;
 display: flex;
 justify-content: center;
 align-items: flex-start;
@@ -101,13 +101,14 @@ color: #555;
 }
 .side-panel {
 width: 35%;
-background: #fbc8d4;
+background: #2c3e50;
 padding: 30px;
 border-radius: 20px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+color: #fafafa;
 }
 
 
@@ -132,5 +133,5 @@ transition: 0.3s;
 
 
 .louer-btn:hover {
-background: #ffe6ed;
+background: #7a87fb;
 }
